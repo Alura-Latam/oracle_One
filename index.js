@@ -44,3 +44,5 @@ pincel.fillRect(450, 0, 350, 250);
 
 pincel.fillStyle = "#042D62";
 pincel.fillRect(450, 350, 350, 250);
+
+pincel.arc();

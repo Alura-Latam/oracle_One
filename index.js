@@ -1,38 +1,46 @@
-/*Aquí tenemos una función que nos permitirá saltar linea una vez en nuestra app de consola.*/
-/*para poder crear una función untilizamos la siguente sintaxis: funtion nombreDeFuncion (Parametros){Aquí va el codigo}*/
-    function saltarLinea() {
+function sorteoNumerico() {
+  //start
 
-        document.write("<br>");
-    }
+  /*Aquí tenemos una función que nos permitirá saltar linea una vez en nuestra app de consola.*/
+  /*para poder crear una función untilizamos la siguente sintaxis: funtion nombreDeFuncion (Parametros){Aquí va el codigo}*/
+  function saltarLinea() {
+    document.write("<br>");
+  }
 
-    function imprimir(frase) {
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
 
-        document.write(frase);
-        saltarLinea();
-    }
+  function sortearNumero() {
+    return Math.round(Math.random() * 10);
+  }
 
-    function sortearNumero() {
+  var numeroPensado = sortearNumero();
 
-        return Math.round(Math.random() * 100);
-    }   
+  var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10: "));
 
-    var numeroPensado = sortearNumero();
+  if (numeroLanzado == numeroPensado) {
+    imprimir("Uau! Vos acertaste, pues yo pensé en el número " + numeroPensado);
+  } else {
+    imprimir("¡Se acabó, vos erraste!");
+  }
+} //fin
 
-    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10: "));
+let pantalla = document.querySelector("canvas");
+let pincel = pantalla.getContext("2d");
+// xywh
+pincel.fillStyle = "white";
+pincel.fillRect(0, 0, 800, 600);
+//azul
+pincel.fillStyle = "#042D62";
+pincel.fillRect(0, 0, 350, 250);
+//rojo
+pincel.fillStyle = "#CC0D24";
+pincel.fillRect(0, 350, 350, 250);
 
-    if(numeroLanzado  == numeroPensado) {
+pincel.fillStyle = "#CC0D24";
+pincel.fillRect(450, 0, 350, 250);
 
-        imprimir("Uau! Vos acertaste, pues yo pensé en el número " + numeroPensado);
-    } else {
-
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-        imprimir("¡Se acabó, vos erraste!");
-    }
+pincel.fillStyle = "#042D62";
+pincel.fillRect(450, 350, 350, 250);

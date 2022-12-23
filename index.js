@@ -29,7 +29,7 @@ function sorteoNumerico() {
 
 let pantalla = document.querySelector("canvas");
 let pincel = pantalla.getContext("2d");
-// xywh
+// xywh Aqui nos dice las pocisiones
 pincel.fillStyle = "white";
 pincel.fillRect(0, 0, 800, 600);
 //azul

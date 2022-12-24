@@ -1,0 +1,15 @@
+<canvas width="600" height="400"> </canvas>
+<script>
+  function dibujarRectangulo(x, y, color, altura) {
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = color;
+    pincel.fillRect(x, y, 50, altura);
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x, y, 50, altura);
+  }
+  dibujarRectangulo(20, 50, "red", Math.round(Math.random() * 50));
+</script>
+
+<!-- dibujarRectangulo(50,50,"green",Math.round(Math.random()*50)); -->
+<!-- En caso de que queramos crear un numero aleatorio entre 0 - 50 para el ancho -->
